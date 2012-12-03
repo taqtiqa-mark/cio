@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+lib = File.expand_path('../../lib', __FILE__)
+$:.unshift(lib) unless $:.include?(lib)
+begin
+  require 'cio'
+rescue LoadError => e
+  warn 'Could not load "cio/cli"'
+  warn e.message
+  warn e.backtrace.join '/n'
+  exit 255
+end
+
+if ARGV.empty?
+  # Perform the default
+  ::Cio::Cli.new.help
+  exit! 1
+else
+  # Start as usual
+  begin
+    ::Cio::Cli.start(ARGV)
+  rescue Interrupt => e
+    warn '\nQuitting...'
+    exit! 1
+  end
+end

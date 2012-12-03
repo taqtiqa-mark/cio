@@ -1,0 +1,4 @@
+BUNDLE_BIN: .bundle/bin
+BUNDLE_SHEBANG: ruby-local-exec
+BUNDLE_DISABLE_SHARED_GEMS: '1'
+BUNDLE_PATH: vendor

@@ -1,18 +1,48 @@
+## MAC OS
+.DS_Store
+
+## TEXTMATE
+*.tmproj
+tmtags
+
+## VIM
+*.swp
+tags
+
+## PROJECT::GENERAL
+coverage
+coverage.data
+rdoc
+pkg
+
+## PROJECT::SPECIFIC
+features/fixtures/vcr_cassettes/**/temp/
 *.gem
 *.rbc
-.bundle
-.config
-coverage
-InstalledFiles
-lib/bundler/man
-pkg
-rdoc
+.rbc
+.rbx
+.bundle/bin
+Gemfile.lock
+logs/*
+!logs/.gitkeep
+tmp/*
+!tmp/.gitkeep
+rerun.txt
 spec/reports
-test/tmp
-test/version_tmp
-tmp
+spec/tmp
+vendor
+
+## PROJECT::TOOLS
+
+.rvmrc
+.yardoc
+doc
+
+## PROJECT::EDITORS
+.idea/
 
 # YARD artifacts
+doc
 .yardoc
 _yardoc
-doc/
+
